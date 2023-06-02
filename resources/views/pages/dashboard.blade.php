@@ -148,9 +148,6 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        {{--                        @php--}}
-                        {{--                            $nomor = 1;--}}
-                        {{--                        @endphp--}}
                         @for($i=0;$i<count($tables); $i++)
                             <tr>
                                 <td>{{ $i+1 }}</td>
@@ -159,9 +156,6 @@
                                 <td>{{ $tables[$i]['Office'] }}</td>
                                 <td>{{ $tables[$i]['Age'] }}</td>
                             </tr>
-                            {{--                            @php--}}
-                            {{--                                $nomor++;--}}
-                            {{--                            @endphp--}}
                         @endfor
                         </tbody>
                     </table>
@@ -169,4 +163,13 @@
             </div>
         </div>
     </main>
+@endsection
+@section("scripts")
+    <script type="module">
+        $(document).ready(function (){
+            $('h1').css({
+                "color": "blue"
+            });
+        })
+    </script>
 @endsection
